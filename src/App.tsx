@@ -15,7 +15,7 @@ export default function App() {
       <AppBarWithTheme>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
+          {/* <Route path="/resume" element={<Resume />} /> */}
           <Route path="/blog" element={<Blog />} />
 
           <Route path="*" element={<NoMatch />} />

@@ -19,6 +19,7 @@ import theme from "./theme";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import getDesignTokens from "./theme";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 const pages = [
@@ -183,11 +184,7 @@ export default function AppBarWithTheme(props: { children: any }) {
 
   const theme = React.useMemo(
     () =>
-      createTheme({
-        palette: {
-          mode
-        }
-      }),
+      createTheme(getDesignTokens(mode)),
     [mode]
   );
 
