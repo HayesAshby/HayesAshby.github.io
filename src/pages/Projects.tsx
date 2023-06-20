@@ -1,36 +1,30 @@
 import { Card, CardContent, CardHeader, Stack } from "@mui/material";
 
 const Projects = () => {
-  return <div>
-    <Stack>
+  return (
+    <div>
+      <Stack>
         <Card>
-            <CardHeader title="Benchmark"/>
-            <CardContent>
-                asdf
-            </CardContent>
+          <CardHeader title="Benchmark" />
+          <CardContent>asdf</CardContent>
         </Card>
         <Card>
-        <CardHeader title="Network Testing Suite"/>
+          <CardHeader title="Network Testing Suite" />
 
-            <CardContent>
-                asdf
-            </CardContent>
+          <CardContent>asdf</CardContent>
         </Card>
         <Card>
-        <CardHeader title="UITest"/>
+          <CardHeader title="UITest" />
 
-            <CardContent>
-                asdf
-            </CardContent>
+          <CardContent>asdf</CardContent>
         </Card>
         <Card>
-        <CardHeader title="Testr"/>
+          <CardHeader title="Testr" />
 
-            <CardContent>
-                asdf
-            </CardContent>
+          <CardContent>asdf</CardContent>
         </Card>
-    </Stack>
-  </div>;
+      </Stack>
+    </div>
+  );
 };
 export default Projects;
