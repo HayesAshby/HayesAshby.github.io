@@ -3,9 +3,9 @@ import { PaletteMode, PaletteOptions, ThemeOptions } from "@mui/material";
 const customComponentsTheme: ThemeOptions["components"] = {
   MuiStack: {
     defaultProps: {
-      spacing: 2
-    }
-  }
+      spacing: 2,
+    },
+  },
 };
 
 /**
@@ -17,17 +17,17 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
   components: customComponentsTheme,
   palette: {
     mode,
-    ...(mode === "light" ? lightTheme : darkTheme)
-  }
+    ...(mode === "light" ? lightTheme : darkTheme),
+  },
 });
 
 const lightTheme: PaletteOptions = {
   // palette values for light mode
   primary: {
-    main: "#10502e"
+    main: "#10502e",
   },
   secondary: {
-    main: "#501032"
+    main: "#501032",
   },
   // success: {
   //   main: "#5aa93f"
@@ -43,7 +43,7 @@ const lightTheme: PaletteOptions = {
 const darkTheme: PaletteOptions = {
   // palette values for dark mode
   primary: {
-    main: "#f50057"
+    main: "#f50057",
   },
   // success: {
   //   main: "#c5ffb4"

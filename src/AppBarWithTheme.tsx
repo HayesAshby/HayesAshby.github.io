@@ -1,19 +1,21 @@
 import * as React from "react";
-import IconButton from "@mui/material/IconButton";
-import Box from "@mui/material/Box";
-import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import {
   AppBar,
   Avatar,
+  Box,
   Button,
   Container,
+  IconButton,
   Menu,
   MenuItem,
+  ThemeProvider,
   Toolbar,
   Tooltip,
-  Typography
+  Typography,
+  createTheme,
+  useTheme,
 } from "@mui/material";
 import theme from "./theme";
 import AdbIcon from "@mui/icons-material/Adb";
@@ -25,7 +27,9 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 const pages = [
   { name: "Home", route: "/" },
   { name: "Resume", route: "/resume" },
-  { name: "Blog", route: "/blog" }
+  { name: "Blog", route: "/blog" },
+  { name: "Projects", route: "/projects" },
+  { name: "About", route: "/about/me" },
 ];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -38,9 +42,6 @@ function ResponsiveAppBar() {
   const colorMode = React.useContext(ColorModeContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
 
@@ -92,17 +93,17 @@ function ResponsiveAppBar() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left"
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left"
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" }
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -131,7 +132,7 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
             LOGO
@@ -177,16 +178,12 @@ export default function AppBarWithTheme(props: { children: any }) {
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-      }
+      },
     }),
     []
   );
 
-  const theme = React.useMemo(
-    () =>
-      createTheme(getDesignTokens(mode)),
-    [mode]
-  );
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>

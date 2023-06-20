@@ -4,6 +4,14 @@ import AppBarWithTheme from "./AppBarWithTheme";
 import NoMatch from "./pages/NoMatch";
 import Blog from "./pages/Blog";
 import Resume from "./pages/Resume";
+import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
+import getDesignTokens from "./theme";
+import React from "react";
+import Routing from "./routing";
+
+export const ColorModeContext = React.createContext({
+  toggleColorMode: () => {},
+});
 
 /**
  * App.
@@ -13,13 +21,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppBarWithTheme>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/resume" element={<Resume />} /> */}
-          <Route path="/blog" element={<Blog />} />
-
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
+        <Routing />
       </AppBarWithTheme>
     </BrowserRouter>
   );
