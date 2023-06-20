@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 
 const AboutMe = () => {
   return (
-    <Box sx={{ bgcolor: 'black'}}>
+    <Box sx={{ bgcolor: 'grey'}}>
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Card sx={{ maxWidth: 1200 }}>
         <CardContent>
