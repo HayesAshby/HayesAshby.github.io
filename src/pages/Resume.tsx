@@ -1,20 +1,20 @@
-import { Card } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Resume = () => {
   return (
-    <Card sx={{ minWidth: 275, minHeight: 600 }}>
+    <Box sx={{ minWidth: 275, minHeight: 600 }}>
       <object
-        data="./resume.pdf"
+        data="/resume.pdf"
         type="application/pdf"
         width="100%"
         height="1200"
       >
         <p>
-          Alternative text - include a link{" "}
-          <a href="./resume.pdf">to the PDF!</a>
+          Link
+          <a href="/resume.pdf">to the PDF!</a>
         </p>
       </object>
-    </Card>
+    </Box>
   );
 };
 export default Resume;
