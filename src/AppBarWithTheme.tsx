@@ -3,7 +3,6 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import {
   AppBar,
-  Avatar,
   Box,
   Button,
   Container,
@@ -12,12 +11,10 @@ import {
   MenuItem,
   ThemeProvider,
   Toolbar,
-  Tooltip,
   Typography,
   createTheme,
   useTheme,
 } from "@mui/material";
-import theme from "./theme";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
