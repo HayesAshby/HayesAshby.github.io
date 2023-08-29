@@ -4,7 +4,7 @@ import React from "react";
 import Routing from "./routing";
 
 export const ColorModeContext = React.createContext({
-  toggleColorMode: () => {},
+  toggleColorMode: () => {}
 });
 
 /**
