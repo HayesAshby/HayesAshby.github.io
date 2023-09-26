@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <Box sx={{ bgcolor: "grey", minHeight: "100%" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Stack>
+        <Stack sx={{ m: 4 }}>
           <Card sx={{ maxWidth: 1200 }}>
             <CardHeader title="Benchmark" />
             <CardContent>
@@ -22,8 +22,8 @@ const Projects = () => {
                 Bench- mark aimed to solve this problem by communicating over
                 the Android Debugging Bridge. This allowed the use of popular
                 apps for testing purposes like Antutu to be automated and ran in
-                a controlled envi- ronment through logged versioning of the
-                tablet with optimal consistency.
+                a controlled environment via versioning of the tablet with
+                optimal consistency.
               </Typography>
             </CardContent>
           </Card>
@@ -59,6 +59,8 @@ const Projects = () => {
               <Typography>
                 A distributed system involving a hub deploying jobs to be ran by
                 external computers and reported in an asynchronous function.
+                This paired with UITest began a end to end testing suite that
+                could scale to a near infinite device list.
               </Typography>
             </CardContent>
           </Card>

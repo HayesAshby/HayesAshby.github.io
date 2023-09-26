@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <Box sx={{ bgcolor: "grey" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Card sx={{ maxWidth: 1200 }}>
+        <Card sx={{ maxWidth: 1200, m: 4 }}>
           <CardContent>
             <Typography paragraph={true}>
               &nbsp;&nbsp;&nbsp;&nbsp;Hello and welcome to my website! My name
