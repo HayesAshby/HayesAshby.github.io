@@ -13,6 +13,17 @@ const Projects = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Stack sx={{ m: 4 }}>
           <Card sx={{ maxWidth: 1200 }}>
+            <CardHeader title="This Website!" />
+
+            <CardContent>
+              <Typography>
+                A React based website designed to show off neat things about me!
+                It is deployed via github pages and then served to my custom
+                domain.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card sx={{ maxWidth: 1200 }}>
             <CardHeader title="Benchmark" />
             <CardContent>
               <Typography>
